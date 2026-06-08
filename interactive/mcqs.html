@@ -1,0 +1,498 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>L01 — The Sarah Chen File · Pop Quiz · 10 MCQs</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT,WONK@0,9..144,300..900,0..100,0..1;1,9..144,300..900,0..100,0..1&family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&family=JetBrains+Mono:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#f0e8d4;
+  --paper-2:#e7dcc1;
+  --paper-3:#d9cca8;
+  --ink:#13110c;
+  --ink-2:#3a3528;
+  --ink-soft:#65604f;
+  --rule:#1b1812;
+  --accent:#cf3a17;
+  --accent-2:#7a1d0a;
+  --teal:#0e4540;
+  --mustard:#b8881f;
+  --good:#1f6b3a;
+  --bad:#9a1c1c;
+  --paper-shadow:rgba(20,15,5,.16);
+  --grain-op:.55;
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;background:var(--paper);color:var(--ink);font-family:"Newsreader",Georgia,serif;font-weight:380;font-size:18px;line-height:1.55;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+body{
+  background-image:
+    radial-gradient(1200px 600px at 80% -10%, rgba(207,58,23,.08), transparent 60%),
+    radial-gradient(900px 500px at -10% 20%, rgba(14,69,64,.07), transparent 60%),
+    repeating-linear-gradient(0deg, rgba(20,17,12,.025) 0 1px, transparent 1px 3px);
+  background-attachment: fixed;
+}
+body::before{
+  content:"";position:fixed;inset:0;pointer-events:none;z-index:60;mix-blend-mode:multiply;opacity:var(--grain-op);
+  background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='240' height='240'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0.08 0 0 0 0 0.07 0 0 0 0 0.05 0 0 0 0 0.18 0'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
+}
+::selection{background:var(--accent);color:var(--paper)}
+a{color:var(--accent-2);text-decoration:none;border-bottom:1px solid currentColor}
+
+.display{font-family:"Fraunces",serif;font-variation-settings:"opsz" 144,"SOFT" 30,"WONK" 1;font-weight:340;letter-spacing:-.025em;line-height:.92}
+.italic{font-style:italic;font-variation-settings:"opsz" 144,"SOFT" 60,"WONK" 1}
+.label{font-family:"JetBrains Mono",ui-monospace,monospace;font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--ink-2)}
+.mono{font-family:"JetBrains Mono",ui-monospace,monospace}
+.rule{border:0;border-top:1px solid var(--rule);margin:0}
+.rule-dot{border:0;border-top:1.5px dotted var(--rule);margin:0}
+.callout{font-style:italic;color:var(--ink-2)}
+
+.masthead{padding:28px 6vw 18px;border-bottom:1px solid var(--rule)}
+.masthead-row{display:flex;align-items:flex-end;justify-content:space-between;gap:24px;flex-wrap:wrap}
+.masthead-title{font-family:"Fraunces",serif;font-variation-settings:"opsz" 144,"WONK" 1;font-weight:340;font-style:italic;font-size:clamp(34px,5vw,56px);letter-spacing:-.03em;line-height:.85}
+.masthead-title sup{font-size:.4em;vertical-align:super;letter-spacing:0;font-style:normal;color:var(--accent)}
+.masthead-meta{display:flex;gap:18px;flex-wrap:wrap;align-items:flex-end}
+.tag{display:inline-block;padding:3px 8px;background:var(--ink);color:var(--paper);font-family:"JetBrains Mono",monospace;font-size:10px;letter-spacing:.18em;text-transform:uppercase}
+.dateline{font-family:"JetBrains Mono",monospace;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-2)}
+
+.cover{padding:5vh 6vw 6vh;border-bottom:1px solid var(--rule);position:relative;overflow:hidden}
+.cover-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:end}
+@media (max-width:900px){.cover-grid{grid-template-columns:1fr;gap:24px}}
+.cover h1{font-family:"Fraunces",serif;font-variation-settings:"opsz" 144,"SOFT" 20,"WONK" 1;font-weight:300;font-size:clamp(56px,11vw,148px);line-height:.84;letter-spacing:-.04em;margin:.1em 0}
+.cover h1 em{font-style:italic;color:var(--accent);font-variation-settings:"opsz" 144,"SOFT" 60,"WONK" 1}
+.cover-lede{font-family:"Newsreader",serif;font-size:clamp(18px,1.6vw,22px);font-style:italic;color:var(--ink-2);max-width:48ch;line-height:1.45}
+.cover-lede .dropcap{float:left;font-family:"Fraunces",serif;font-style:italic;font-variation-settings:"opsz" 144,"WONK" 1;font-size:5.2em;line-height:.78;padding:.08em .1em 0 0;color:var(--accent);font-weight:330}
+
+.scoreboard{display:grid;grid-template-columns:1fr 1fr 1fr;gap:0;border:1px solid var(--rule);background:var(--paper-2)}
+.score{padding:18px;border-right:1px solid var(--rule);position:relative}
+.score:last-child{border-right:0}
+.score .lab{font-family:"JetBrains Mono",monospace;font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--ink-2)}
+.score .val{font-family:"Fraunces",serif;font-style:italic;font-variation-settings:"opsz" 144,"WONK" 1;font-size:54px;line-height:1;letter-spacing:-.03em;color:var(--ink);margin-top:6px}
+.score .val em{color:var(--accent);font-style:italic}
+.score .val .sub{font-family:"JetBrains Mono",monospace;font-size:14px;letter-spacing:.04em;color:var(--ink-soft);margin-left:4px}
+.score .bar{margin-top:10px;height:6px;background:var(--paper-3);border:1px solid var(--rule);position:relative;overflow:hidden}
+.score .bar::after{content:"";position:absolute;inset:0;width:var(--w,0%);background:var(--accent);transition:width .35s ease}
+.action-row{display:flex;gap:10px;margin-top:14px;flex-wrap:wrap}
+.btn{font-family:"JetBrains Mono",monospace;font-size:11px;letter-spacing:.18em;text-transform:uppercase;padding:9px 14px;background:transparent;border:1px solid var(--rule);color:var(--ink);cursor:pointer;transition:background .18s,color .18s}
+.btn:hover{background:var(--ink);color:var(--paper)}
+.btn.primary{background:var(--accent);color:var(--paper);border-color:var(--accent)}
+.btn.primary:hover{background:var(--accent-2);border-color:var(--accent-2)}
+
+section{padding:6vh 6vw;border-bottom:1px solid var(--rule);position:relative}
+.section-head{display:grid;grid-template-columns:120px 1fr;gap:32px;margin-bottom:36px;align-items:start}
+@media (max-width:760px){.section-head{grid-template-columns:1fr;gap:8px}}
+.section-num{font-family:"Fraunces",serif;font-style:italic;font-variation-settings:"opsz" 144,"WONK" 1;font-size:84px;line-height:.8;color:var(--accent);font-weight:340}
+.section-title h2{font-family:"Fraunces",serif;font-variation-settings:"opsz" 144,"SOFT" 20,"WONK" 1;font-weight:340;font-size:clamp(30px,4vw,48px);line-height:.95;letter-spacing:-.03em;margin:0 0 .25em}
+.section-title h2 em{font-style:italic;color:var(--accent)}
+.section-title .deck{font-family:"Newsreader",serif;font-style:italic;color:var(--ink-2);font-size:19px;max-width:62ch}
+
+.mcq{border:1px solid var(--rule);background:var(--paper-2);margin-bottom:28px;position:relative;overflow:hidden}
+.mcq::before{content:"";position:absolute;left:0;top:0;width:42px;height:42px;background:var(--accent);clip-path:polygon(0 0,100% 0,0 100%);z-index:1}
+.mcq.correct::before{background:var(--good)}
+.mcq.wrong::before{background:var(--bad)}
+.mcq-head{padding:20px 24px 14px;display:grid;grid-template-columns:80px 1fr auto;gap:18px;align-items:start;border-bottom:1px solid var(--rule)}
+@media (max-width:680px){.mcq-head{grid-template-columns:60px 1fr;}.mcq-head .pill{grid-column:1/-1}}
+.mcq-num{font-family:"Fraunces",serif;font-style:italic;font-variation-settings:"opsz" 144,"WONK" 1;font-size:64px;line-height:.85;color:var(--accent);letter-spacing:-.03em}
+.mcq-q{font-family:"Fraunces",serif;font-variation-settings:"opsz" 144,"SOFT" 10,"WONK" 1;font-weight:340;font-size:clamp(20px,2vw,26px);line-height:1.2;letter-spacing:-.018em;color:var(--ink)}
+.mcq-q .topic{display:block;font-family:"JetBrains Mono",monospace;font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--ink-soft);margin-bottom:8px;font-weight:400}
+.pill{display:inline-block;padding:5px 10px;background:var(--paper);border:1px solid var(--rule);font-family:"JetBrains Mono",monospace;font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-2);white-space:nowrap;align-self:start}
+.pill.part1{background:var(--accent);color:var(--paper);border-color:var(--accent)}
+.pill.part2{background:var(--teal);color:var(--paper);border-color:var(--teal)}
+.pill.part3{background:var(--mustard);color:var(--paper);border-color:var(--mustard)}
+
+.choices{padding:14px 24px 4px;display:grid;grid-template-columns:1fr;gap:8px}
+.choice{display:grid;grid-template-columns:34px 1fr auto;gap:14px;align-items:center;padding:12px 14px;background:var(--paper);border:1px solid var(--rule);cursor:pointer;transition:background .15s,transform .12s;font-family:"Newsreader",serif;font-size:16.5px;line-height:1.4;color:var(--ink);text-align:left}
+.choice:hover{background:var(--paper-3)}
+.choice .letter{width:28px;height:28px;border-radius:50%;border:1px solid var(--rule);display:grid;place-items:center;font-family:"Fraunces",serif;font-style:italic;font-weight:500;font-size:16px;background:var(--paper-2);color:var(--ink)}
+.choice .mark{font-family:"JetBrains Mono",monospace;font-size:11px;letter-spacing:.16em;color:transparent}
+.choice.selected{background:var(--ink);color:var(--paper)}
+.choice.selected .letter{background:var(--accent);color:var(--paper);border-color:var(--accent)}
+.mcq.locked .choice{cursor:default}
+.mcq.locked .choice:hover{background:var(--paper)}
+.mcq.locked .choice.selected:hover{background:var(--ink)}
+.mcq.locked .choice.is-correct{background:#e3eed8;border-color:var(--good);color:var(--ink)}
+.mcq.locked .choice.is-correct .letter{background:var(--good);color:var(--paper);border-color:var(--good)}
+.mcq.locked .choice.is-correct .mark{color:var(--good)}
+.mcq.locked .choice.is-correct .mark::before{content:"\2713 correct"}
+.mcq.locked .choice.is-wrong{background:#f3dcd6;border-color:var(--bad);color:var(--ink-2)}
+.mcq.locked .choice.is-wrong .letter{background:var(--bad);color:var(--paper);border-color:var(--bad)}
+.mcq.locked .choice.is-wrong .mark{color:var(--bad)}
+.mcq.locked .choice.is-wrong .mark::before{content:"\2717 your pick"}
+
+.explain{display:none;padding:18px 24px 22px;border-top:1px dotted var(--rule);background:var(--paper);position:relative}
+.mcq.locked .explain{display:block}
+.explain .lab{font-family:"JetBrains Mono",monospace;font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:var(--accent-2);margin-bottom:8px;display:flex;gap:10px;align-items:center}
+.explain .lab::before{content:"";display:inline-block;width:18px;height:1px;background:var(--accent-2)}
+.explain p{margin:0 0 8px;font-family:"Newsreader",serif;font-size:16px;color:var(--ink-2);line-height:1.55}
+.explain p strong{color:var(--ink);font-weight:600}
+.explain .ref{font-family:"JetBrains Mono",monospace;font-size:10px;letter-spacing:.14em;color:var(--ink-soft);margin-top:6px;text-transform:uppercase}
+
+.verdict-stamp{position:absolute;top:14px;right:18px;font-family:"Fraunces",serif;font-style:italic;font-weight:340;font-size:32px;letter-spacing:-.02em;line-height:1;opacity:0;transform:rotate(-6deg) scale(.9);transition:opacity .25s,transform .25s;z-index:2}
+.mcq.locked.correct .verdict-stamp{opacity:1;transform:rotate(-6deg) scale(1);color:var(--good)}
+.mcq.locked.wrong .verdict-stamp{opacity:1;transform:rotate(-6deg) scale(1);color:var(--bad)}
+
+.result{display:none;padding:32px;border:1px solid var(--rule);background:var(--ink);color:var(--paper);position:relative;overflow:hidden;margin-top:30px}
+.result.show{display:block}
+.result::before{content:"";position:absolute;inset:0;background:radial-gradient(800px 400px at 80% 30%,rgba(207,58,23,.22),transparent 60%);pointer-events:none}
+.result-grid{display:grid;grid-template-columns:1fr 1.4fr;gap:28px;align-items:center;position:relative}
+@media (max-width:760px){.result-grid{grid-template-columns:1fr}}
+.result .big{font-family:"Fraunces",serif;font-variation-settings:"opsz" 144,"SOFT" 30,"WONK" 1;font-weight:300;font-style:italic;font-size:clamp(64px,10vw,128px);line-height:.85;letter-spacing:-.04em}
+.result .big em{color:var(--accent);font-style:italic}
+.result .verdict-line{font-family:"Fraunces",serif;font-style:italic;font-variation-settings:"opsz" 144,"WONK" 1;font-weight:340;font-size:clamp(24px,3vw,38px);line-height:1.1;letter-spacing:-.02em;margin:0 0 10px}
+.result .verdict-line em{color:var(--accent)}
+.result .verdict-body{font-family:"Newsreader",serif;font-size:17px;line-height:1.55;color:#cfc6ad;margin:0 0 14px}
+.result .restart{margin-top:8px}
+
+.pull{padding:8vh 6vw;background:var(--ink);color:var(--paper);position:relative;overflow:hidden;border-bottom:1px solid var(--rule)}
+.pull::before{content:"";position:absolute;inset:0;background:radial-gradient(800px 400px at 80% 30%,rgba(207,58,23,.22),transparent 60%);pointer-events:none}
+.pull blockquote{margin:0;max-width:22ch;font-family:"Fraunces",serif;font-variation-settings:"opsz" 144,"SOFT" 30,"WONK" 1;font-style:italic;font-weight:300;font-size:clamp(34px,5vw,68px);letter-spacing:-.025em;line-height:1;position:relative}
+.pull blockquote em{color:var(--accent);font-style:italic}
+.pull cite{display:block;margin-top:18px;font-family:"JetBrains Mono",monospace;font-style:normal;font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:#cfc6ad;position:relative}
+
+footer{padding:5vh 6vw;display:flex;justify-content:space-between;gap:20px;align-items:flex-end;flex-wrap:wrap}
+footer .colophon{font-family:"JetBrains Mono",monospace;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-2);max-width:60ch}
+footer .stamp{font-family:"Fraunces",serif;font-style:italic;font-weight:340;font-variation-settings:"opsz" 144,"WONK" 1;font-size:38px;letter-spacing:-.02em;color:var(--accent)}
+
+button:focus-visible,.choice:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+code{font-family:"JetBrains Mono",monospace;font-size:.92em;background:var(--paper-3);padding:1px 5px;border:1px solid var(--rule)}
+</style>
+</head>
+<body>
+
+<header class="masthead">
+  <div class="masthead-row">
+    <div>
+      <div class="dateline">M3 &middot; Module Three &middot; Machine Learning &amp; GenAI</div>
+      <div class="masthead-title">The Pop <span class="italic">Quiz</span><sup>L01</sup></div>
+    </div>
+    <div class="masthead-meta">
+      <span class="tag">Self-Check &middot; 10 Questions</span>
+      <span class="dateline">Vol. 1 &middot; Issue 01 &middot; Intro to ML</span>
+    </div>
+  </div>
+</header>
+
+<section class="cover">
+  <div class="cover-grid">
+    <div>
+      <div class="label" style="color:var(--accent)">After the field notes &middot; A 10-question self-check</div>
+      <h1>Did the lesson <em>stick?</em></h1>
+      <p class="cover-lede"><span class="dropcap">T</span>en multiple-choice questions, one concept apiece &mdash; the same vocabulary Sarah Chen needs before her Friday deadline. Tap a choice to lock it in. The explanation appears immediately. Your tally lives in the scoreboard on the right.</p>
+    </div>
+    <div>
+      <div class="scoreboard">
+        <div class="score">
+          <div class="lab">Answered</div>
+          <div class="val" id="s-answered">0<span class="sub">/10</span></div>
+          <div class="bar" id="bar-answered" style="--w:0%"></div>
+        </div>
+        <div class="score">
+          <div class="lab">Correct</div>
+          <div class="val"><em id="s-correct">0</em><span class="sub">/10</span></div>
+          <div class="bar" id="bar-correct" style="--w:0%"></div>
+        </div>
+        <div class="score">
+          <div class="lab">Score</div>
+          <div class="val" id="s-score">&mdash;<span class="sub">%</span></div>
+          <div class="bar" id="bar-score" style="--w:0%"></div>
+        </div>
+      </div>
+      <div class="action-row">
+        <button class="btn primary" id="btn-reveal">Reveal verdict</button>
+        <button class="btn" id="btn-reset">Reset quiz</button>
+        <span class="label" style="align-self:center;letter-spacing:.18em">Tap a choice to lock it</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="quiz">
+  <div class="section-head">
+    <div class="section-num">Q.</div>
+    <div class="section-title">
+      <h2>Ten <em>questions</em>, ten concepts.</h2>
+      <p class="deck">Part 1 covers <i>what ML is</i>. Part 2 covers the <i>three categories</i>. Part 3 covers the <i>seven-step workflow</i>. One correct answer per question &mdash; pick the best fit.</p>
+    </div>
+  </div>
+
+  <div id="quiz-list"></div>
+
+  <div class="result" id="result">
+    <div class="result-grid">
+      <div>
+        <div class="label" style="color:var(--accent)">Verdict</div>
+        <div class="big" id="r-score"><em>&mdash;</em>/10</div>
+        <div class="label" id="r-pct">&mdash; %</div>
+      </div>
+      <div>
+        <h3 class="verdict-line" id="r-headline">Pick all ten before the editor pulls the verdict.</h3>
+        <p class="verdict-body" id="r-body">Lock in an answer for every question, then press <i>Reveal verdict</i>.</p>
+        <button class="btn restart" id="btn-restart">Take it again</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="pull">
+  <blockquote>The work <em>isn&rsquo;t</em> picking the model.<br>It&rsquo;s framing the <em>question.</em></blockquote>
+  <cite>&mdash; L01 take-away &middot; Sarah Chen &middot; NorthStar Retail</cite>
+</section>
+
+<footer>
+  <div class="colophon">
+    Set in <i>Fraunces</i> &amp; <i>Newsreader</i>. M3 &middot; Lesson 01 &middot; Pop Quiz Edition. Press <i>Reset</i> to start over. Answers reference the L01 lesson notes &amp; notebooks 02&ndash;04.
+  </div>
+  <div class="stamp">&mdash; fin.</div>
+</footer>
+
+<script>
+const QUESTIONS = [
+  {
+    n: 1, part: 1, topic: "Rule-based vs ML",
+    q: "NorthStar wants to automatically send a coupon to every customer whose birthday is today. Which approach fits best?",
+    choices: [
+      "A supervised classification model trained on past birthday data.",
+      "A rule-based <code>if today == birthday</code> check &mdash; no ML needed.",
+      "An unsupervised clustering model to group customers by birth month.",
+      "A reinforcement-learning agent that learns which dates should trigger coupons."
+    ],
+    correct: 1,
+    explain: "<strong>Rule-based.</strong> The rule is exact, one-line, and zero-uncertainty. Reaching for ML here adds cost, complexity, and the risk of being <i>wrong</i> on something a deterministic <code>if</code> would always get right. Half the value of an ML practitioner is knowing when <strong>not</strong> to reach for ML."
+  },
+  {
+    n: 2, part: 1, topic: "The 3-condition checklist",
+    q: "ML is the right tool when <em>all three</em> conditions are met. Which set lists them correctly?",
+    choices: [
+      "(1) Lots of compute, (2) a deep neural network, (3) a GPU.",
+      "(1) Rules are hard to write by hand, (2) you have data with labelled examples, (3) being right most of the time is good enough.",
+      "(1) A real-time API, (2) a cloud account, (3) a data engineer.",
+      "(1) The task is novel, (2) the data is small, (3) the answer must be 100% correct."
+    ],
+    correct: 1,
+    explain: "<strong>Hard rules, enough data, probabilistic-acceptable.</strong> If any one is missing, ML is the wrong tool. Catastrophic-cost-of-error problems (flight control) fail condition&nbsp;3; problems with no data fail condition&nbsp;2; problems with obvious rules (tax calculations) fail condition&nbsp;1."
+  },
+  {
+    n: 3, part: 1, topic: "Training vs Inference",
+    q: "What is the difference between <i>training</i> and <i>inference</i>?",
+    choices: [
+      "Training is for classification; inference is for regression.",
+      "Training happens in the cloud; inference happens on a laptop.",
+      "Training is the slow, compute-heavy step of learning rules from labelled examples; inference is using the trained model to predict on new data.",
+      "Training uses Python; inference uses C++."
+    ],
+    correct: 2,
+    explain: "<strong>Train once, infer many times.</strong> Training learns parameters from examples and is usually slow and expensive. Inference runs the trained model on a single new input and is usually fast and cheap. In Sarah&rsquo;s case, someone else already trained the sentiment model &mdash; she only ever runs inference."
+  },
+  {
+    n: 4, part: 1, topic: "M1 / M2 / M3",
+    q: "Aisha asks Sarah to decide whether a <em>new</em> incoming review mentions a shipping complaint. Which module of the DSAI programme does this task belong to?",
+    choices: [
+      "M1 &mdash; summarising the past (counting, aggregating).",
+      "M2 &mdash; moving and joining data across systems.",
+      "M3 &mdash; judgement about a new thing, with no simple rule.",
+      "None of the above &mdash; it&rsquo;s a UX problem."
+    ],
+    correct: 2,
+    explain: "<strong>M3.</strong> The decision is per-record, fuzzy, and there&rsquo;s no clean <code>if</code> statement for &lsquo;mentions a shipping complaint&rsquo;. Counting reviews per month is M1; merging the review table with the orders table is M2; classifying a single review is M3 &mdash; the ML zone."
+  },
+  {
+    n: 5, part: 2, topic: "Three categories &mdash; supervised",
+    q: "Sarah has 50,000 past reviews already labelled <i>positive</i> or <i>negative</i> and wants the model to predict labels for new reviews. Which category is this?",
+    choices: [
+      "Unsupervised learning.",
+      "Supervised learning.",
+      "Reinforcement learning.",
+      "Semi-deterministic learning."
+    ],
+    correct: 1,
+    explain: "<strong>Supervised.</strong> Features (review text) <i>plus</i> labels (positive/negative) <i>plus</i> the goal of predicting labels for unseen inputs &mdash; that is the supervised recipe. L01&ndash;L04 and L08&ndash;L10 are all variations on this theme."
+  },
+  {
+    n: 6, part: 2, topic: "Three categories &mdash; unsupervised",
+    q: "A newspaper wants to automatically group its last 10&nbsp;years of articles into &lsquo;topics&rsquo; <em>without</em> specifying the topics in advance. Which category fits?",
+    choices: [
+      "Supervised &mdash; the editors will label a few first.",
+      "Reinforcement &mdash; the model gets rewarded for good topics.",
+      "Unsupervised &mdash; no labels, the goal is to discover structure.",
+      "Time-series &mdash; the data has a clock."
+    ],
+    correct: 2,
+    explain: "<strong>Unsupervised.</strong> No labels are given, and the objective is to <i>discover</i> the categories (clusters/topics). This is the family of techniques you meet in L05 &mdash; PCA, k-means, anomaly detection."
+  },
+  {
+    n: 7, part: 3, topic: "The 7-step workflow",
+    q: "On a real ML project, roughly what share of total effort is spent on <em>training and evaluation</em>?",
+    choices: [
+      "60&ndash;70% &mdash; training is the main event.",
+      "10&ndash;20% &mdash; framing, collecting, and cleaning dominate the work.",
+      "Roughly 50% &mdash; split evenly with data work.",
+      "Less than 1% &mdash; modern tools auto-train everything."
+    ],
+    correct: 1,
+    explain: "<strong>10&ndash;20%.</strong> Framing, data collection, and cleaning take 60&ndash;70%; deploy and monitor another 20%. Training/eval is the smallest slice &mdash; the opposite of what most beginners expect. Plan accordingly."
+  },
+  {
+    n: 8, part: 3, topic: "Framing the problem",
+    q: "Priya says &lsquo;90% accuracy is fine&rsquo;. Is the framing complete?",
+    choices: [
+      "Yes &mdash; an accuracy target is all you need to ship.",
+      "Yes &mdash; once accuracy is set, the rest is engineering.",
+      "No &mdash; you still need to clarify <i>accuracy on what</i>, <i>who acts on the answer</i>, and the <i>cost of each kind of wrong answer</i>.",
+      "No &mdash; you need a precision target instead."
+    ],
+    correct: 2,
+    explain: "<strong>Framing is the highest-leverage step.</strong> &lsquo;90% accuracy&rsquo; leaves open: accuracy <i>on whom</i> (overall or on rare severe-complaint cases?), <i>who acts on it</i> (auto-coupon to angry customers?), and what each kind of error <i>costs</i>. Pushing back on the brief is part of the job."
+  },
+  {
+    n: 9, part: 3, topic: "Overfitting",
+    q: "A model scores <strong>98% on training data</strong> and <strong>70% on the held-out test set</strong>. What is the most likely diagnosis?",
+    choices: [
+      "Underfitting &mdash; the model is too simple.",
+      "Data leakage &mdash; test labels leaked into training.",
+      "Overfitting &mdash; the model memorised the training data instead of learning general patterns.",
+      "Data drift &mdash; the world has changed since training."
+    ],
+    correct: 2,
+    explain: "<strong>Classic overfitting.</strong> A big gap between train and test means the model learned <i>this dataset</i> instead of the underlying signal. Fixes: simpler model, more regularisation, more training data, or fewer / better features. Covered properly in L03 &amp; L04."
+  },
+  {
+    n: 10, part: 3, topic: "Monitoring &amp; drift",
+    q: "Six months after deploying a fraud-detection model, accuracy has dropped 10 percentage points. What most likely happened, and which workflow step exposed it?",
+    choices: [
+      "The model forgot what it learned &mdash; step 4 (training) failed.",
+      "Data drift &mdash; fraudsters changed tactics or customer behaviour shifted; step 7 (monitoring) caught it.",
+      "The test set was too small &mdash; step 5 (evaluation) failed.",
+      "The deployment broke &mdash; step 6 (deploy) failed silently."
+    ],
+    correct: 1,
+    explain: "<strong>Data drift.</strong> Models don&rsquo;t forget &mdash; the <i>world</i> changes around them. Step&nbsp;7 (monitor) surfaces the decay; the fix is to retrain on fresher data (loop back to step&nbsp;4). This is why &lsquo;train once and forget&rsquo; doesn&rsquo;t survive contact with production."
+  }
+];
+
+const state = { picks: {}, locked: {}, revealed: false };
+const partLabel = (p) => p === 1 ? "Part 1 · What is ML?" : p === 2 ? "Part 2 · Three categories" : "Part 3 · The workflow";
+const partClass = (p) => p === 1 ? "part1" : p === 2 ? "part2" : "part3";
+
+function render(){
+  const root = document.getElementById('quiz-list');
+  root.innerHTML = QUESTIONS.map(q => {
+    const locked = state.locked[q.n];
+    const pick = state.picks[q.n];
+    const correct = pick === q.correct;
+    const cls = ['mcq'];
+    if (locked) cls.push('locked');
+    if (locked && correct) cls.push('correct');
+    if (locked && pick !== -1 && !correct) cls.push('wrong');
+    if (locked && pick === -1) cls.push('wrong');
+    const stamp = locked ? (correct ? "— correct" : (pick === -1 ? "— skipped" : "— not quite")) : "";
+    return `
+      <article class="${cls.join(' ')}" id="mcq-${q.n}">
+        <div class="verdict-stamp">${stamp}</div>
+        <div class="mcq-head">
+          <div class="mcq-num">${String(q.n).padStart(2,'0')}</div>
+          <div class="mcq-q"><span class="topic">${q.topic}</span>${q.q}</div>
+          <span class="pill ${partClass(q.part)}">${partLabel(q.part)}</span>
+        </div>
+        <div class="choices">
+          ${q.choices.map((c,i) => {
+            const isPick = pick === i;
+            const isAnswer = q.correct === i;
+            const choiceCls = ['choice'];
+            if (isPick) choiceCls.push('selected');
+            if (locked && isAnswer) choiceCls.push('is-correct');
+            if (locked && isPick && !isAnswer) choiceCls.push('is-wrong');
+            const letter = String.fromCharCode(65+i);
+            return `<button class="${choiceCls.join(' ')}" data-q="${q.n}" data-i="${i}" ${locked?'disabled':''}>
+              <span class="letter">${letter}</span>
+              <span class="text">${c}</span>
+              <span class="mark"></span>
+            </button>`;
+          }).join('')}
+        </div>
+        <div class="explain">
+          <div class="lab">Why this answer</div>
+          <p>${q.explain}</p>
+          <div class="ref">Ref · L01 lesson.md · ${partLabel(q.part)}</div>
+        </div>
+      </article>`;
+  }).join('');
+  root.querySelectorAll('.choice').forEach(b => b.addEventListener('click', onPick));
+  updateScore();
+}
+
+function onPick(e){
+  const btn = e.currentTarget;
+  const qn = +btn.dataset.q;
+  const i = +btn.dataset.i;
+  if (state.locked[qn]) return;
+  state.picks[qn] = i;
+  state.locked[qn] = true;
+  render();
+  const el = document.getElementById('mcq-'+qn);
+  if (el) el.scrollIntoView({behavior:'smooth', block:'nearest'});
+}
+
+function updateScore(){
+  const answered = Object.keys(state.locked).length;
+  let correct = 0;
+  QUESTIONS.forEach(q => { if (state.locked[q.n] && state.picks[q.n] === q.correct) correct++; });
+  const pct = answered ? Math.round(100 * correct / answered) : 0;
+  document.getElementById('s-answered').innerHTML = `${answered}<span class="sub">/10</span>`;
+  document.getElementById('s-correct').textContent = correct;
+  document.getElementById('s-score').innerHTML = answered ? `${pct}<span class="sub">%</span>` : `&mdash;<span class="sub">%</span>`;
+  document.getElementById('bar-answered').style.setProperty('--w', (answered*10)+'%');
+  document.getElementById('bar-correct').style.setProperty('--w', (correct*10)+'%');
+  document.getElementById('bar-score').style.setProperty('--w', pct+'%');
+  if (state.revealed) drawResult();
+}
+
+function drawResult(){
+  const correct = QUESTIONS.reduce((acc,q) => acc + (state.picks[q.n] === q.correct ? 1 : 0), 0);
+  const pct = Math.round(100 * correct / 10);
+  const r = document.getElementById('result');
+  r.classList.add('show');
+  document.getElementById('r-score').innerHTML = `<em>${correct}</em>/10`;
+  document.getElementById('r-pct').textContent = `${pct} % correct`;
+  let head, body;
+  if (correct === 10) {
+    head = `Editor&rsquo;s desk: <em>flawless.</em> File the story.`;
+    body = `Ten for ten. You&rsquo;ve internalised the L01 mental model &mdash; the ML-fit checklist, the three categories, and the seven-step workflow. Carry this vocabulary into L02 (Probability &amp; Statistics) where Sarah finally gets to ask <i>how sure are we?</i>`;
+  } else if (correct >= 8) {
+    head = `<em>Solid byline.</em> Tighten one or two details and you&rsquo;re ready for L02.`;
+    body = `You&rsquo;ve got the spine of L01 &mdash; the ML decision, the categories, the workflow. Re-read the questions you missed; they&rsquo;re usually the framing or monitoring nuances that beginners under-weight. Then move on.`;
+  } else if (correct >= 5) {
+    head = `<em>Half a draft.</em> Run the notebooks again before L02.`;
+    body = `You&rsquo;ve picked up the headline ideas but the supporting beats are wobbly. Open <code>04_ml_workflow.ipynb</code> and re-read the lesson takeaways. Aim for 8+ before tackling L02 &mdash; the probability lesson assumes this vocabulary as baseline.`;
+  } else {
+    head = `<em>Spike it.</em> The story needs a second pass.`;
+    body = `This is normal on a first attempt without the notebooks. Go back through <i>02_what_is_ml</i>, <i>03_three_categories</i>, and <i>04_ml_workflow</i>, then retake. L01 installs the vocabulary every later lesson assumes &mdash; it&rsquo;s worth a second read.`;
+  }
+  document.getElementById('r-headline').innerHTML = head;
+  document.getElementById('r-body').innerHTML = body;
+}
+
+document.getElementById('btn-reveal').addEventListener('click', () => {
+  QUESTIONS.forEach(q => {
+    if (!state.locked[q.n]) { state.locked[q.n] = true; state.picks[q.n] = -1; }
+  });
+  state.revealed = true;
+  render();
+  drawResult();
+  document.getElementById('result').scrollIntoView({behavior:'smooth', block:'center'});
+});
+
+function reset(){
+  state.picks = {}; state.locked = {}; state.revealed = false;
+  document.getElementById('result').classList.remove('show');
+  render();
+  document.getElementById('quiz').scrollIntoView({behavior:'smooth', block:'start'});
+}
+document.getElementById('btn-reset').addEventListener('click', reset);
+document.getElementById('btn-restart').addEventListener('click', reset);
+
+render();
+</script>
+</body>
+</html>

@@ -146,7 +146,7 @@ In VS Code, **Cmd/Ctrl+Shift+X** opens the Extensions sidebar. Install:
 ## 5. Open the repo in VS Code
 
 ```bash
-cd ~/repos/dsai-m3-l01-learner
+cd ~/repos/6m-data-3.1-Introduction-to-Machine-Learning
 code .
 ```
 
